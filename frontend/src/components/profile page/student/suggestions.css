@@ -1,0 +1,149 @@
+.suggestions-page {
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  width: 1200px;
+  min-height: 100vh;
+  padding: 100px 20px 40px 100px;
+  box-sizing: border-box;
+}
+
+.suggestions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap; /* key: side-by-side on desktop */
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6b2fb2;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service-column {
+  flex: 1;
+  background-color: #e3e0f3;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  min-width: 0;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.card-scroll {
+  max-height: 550px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Scrollbar styling */
+.card-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-scroll::-webkit-scrollbar-thumb {
+  background-color: #b29fe5;
+  border-radius: 4px;
+}
+
+/* ===== Service Card ===== */
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* Newly added left border */
+  border-left: 5px solid #6b2fb2;
+}
+
+/* Optional: Different colored borders based on type */
+.service-card.room {
+  border-left: 5px solid #ffc107; /* Yellow */
+}
+
+.service-card.mess {
+  border-left: 5px solid #28a745; /* Green */
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card-info {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.card-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.card-img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.interested-btn {
+  background-color: #834fc1;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.interested-btn:hover {
+  background-color: #6d3aa8;
+  transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .suggestions-container {
+    flex-direction: column;
+  }
+
+  .service-column {
+    max-width: 100%;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-logo {
+    align-items: flex-start;
+  }
+
+  .card-img {
+    width: 80px;
+  }
+
+  .interested-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

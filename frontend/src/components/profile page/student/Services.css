@@ -1,0 +1,190 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f7f9fc, #e8e8ff);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== Container ===== */
+.service-container {
+  padding: 90px 20px 40px 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.service-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4b0082;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* ===== Card Layout ===== */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.info-card,
+.message-card,
+.rating-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  flex: 1 1 300px;
+  width: 445px;
+  transition: transform 0.2s ease;
+}
+
+.info-card:hover,
+.message-card:hover,
+.rating-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-card {
+  border-left: 5px solid #007bff;
+}
+.message-card {
+  border-left: 5px solid #28a745;
+}
+.rating-card {
+  border-left: 5px solid #ffa500;
+}
+
+/* ===== Info Text ===== */
+.info-card p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.info-card strong {
+  color: #4b0082;
+}
+
+/* ===== Message Section ===== */
+.message-card h4,
+.rating-card h4 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #4b0082;
+}
+
+.message-card textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  color: black;      
+  font-size: 15px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  min-height: 140px;
+  background-color: #fdfdfd;
+  margin-bottom: 18px;
+}
+
+.service-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.service-buttons button {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button.send {
+  background-color: #2f2fff;
+}
+button.change {
+  background-color: #ff9900;
+}
+button.remove {
+  background-color: #dc3545;
+}
+.service-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Rating Card ===== */
+.rating-card input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.rating-card button {
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.rating-card button:hover {
+  background-color: #0056b3;
+}
+
+.rating-card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== Info Messages ===== */
+.error {
+  color: red;
+  padding: 1rem;
+}
+
+.info-msg {
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-card,
+  .message-card,
+  .rating-card {
+    width: 100%;
+  }
+
+  .service-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .service-title {
+    text-align: center;
+    font-size: 24px;
+  }
+}
