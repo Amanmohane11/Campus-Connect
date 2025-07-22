@@ -9,12 +9,13 @@ import Footer from "./Footer.jsx";
 import ServicedBy from './ServicedBy.jsx';
 import StudentInfo from "./StudentInfo.jsx";
 import MessInfo from "./MessInfo.jsx";
-import ContactUs from "./ContactUs.jsx";
+// import ContactUs from "./ContactUs.jsx";
 import RoomInfo from "./RoomInfo.jsx";
 import img1 from '../../assets/img1.png';
 import bgImage from '../../assets/home-bg.jpg'; // ✅ imported background image
 
 import "./landing.css";
+import ContactUs from "./ContactUs.jsx";
 
 const LandingPage = () => {
   const location = useLocation();
@@ -102,7 +103,7 @@ const LandingPage = () => {
       <MessInfo />
       <RoomInfo />
       <div id="ContactUs">
-        <ContactUs />
+        <ContactUs/>
       </div>
 
       <Footer />
