@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from './components/landing page/landing.jsx';
-import SignupPage from './components/signup page/signup.jsx';
-import ContactUs from './components/landing page/contactUs.jsx';
+import LandingPage from './components/landing page/Landing.jsx';
+import SignupPage from './components/signup page/Signup.jsx';
+import ContactUs from './components/landing page/ContactUs.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx'; // Import
-import LoginPage from "./components/login page/loginpage.jsx";
-import ForgotPassword from "./components/login page/forgotPassword.jsx";
-import ProfilePage from "./components/profile page/student/profilepage.jsx";
+import LoginPage from "./components/login page/LoginPage.jsx";
+import ForgotPassword from "./components/login page/ForgotPassword.jsx";
+import ProfilePage from "./components/profile page/student/Profilepage.jsx";
 import MessProfilePage from "./components/profile page/messProvider/MessProfilePage.jsx";
-import MessForgotPassword from "./components/login page/messForgotpass.jsx";
-import RoomForgotPassword from "./components/login page/roomForgotpass.jsx";
+import MessForgotPassword from "./components/login page/MessForgotpass.jsx";
+import RoomForgotPassword from "./components/login page/RoomForgotpass.jsx";
 import RoomProfilePage from "./components/profile page/RoomProvider/RoomProfilepage.jsx";
 // import Dashboard from "./components/profile page/student/ProfilePage.jsx"; // ✅
 

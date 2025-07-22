@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar.jsx';
 import Sidebar from './Sidebar.jsx';
 import Dashboard from './Dashboard.jsx';
-import RoomServices from './roomServices.jsx';
-import MessServices from './messServices.jsx';
-import Suggestions from './suggestions.jsx';
+import RoomServices from './RoomServices.jsx';
+import MessServices from './MessServices.jsx';
+import Suggestions from './Suggestions.jsx';
 import StdContactus from './Stdcontactus.jsx';
 import StdUpdateDetails from './StdUpdateDetails.jsx';
 

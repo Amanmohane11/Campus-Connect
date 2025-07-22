@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/CampusConnect logo.png';
-import './loginNavbar.css';
+import './LoginNavbar.css';
 
 const LoginNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

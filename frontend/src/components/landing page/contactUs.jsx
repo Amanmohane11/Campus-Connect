@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import './ContactUs.css';
+import './contactUs.css';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

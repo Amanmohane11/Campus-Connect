@@ -1,5 +1,5 @@
 import React from 'react';
-import './StudentInfo.css';
+import './studentInfo.css';
 import studentImg from '../../assets/img2.png';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';

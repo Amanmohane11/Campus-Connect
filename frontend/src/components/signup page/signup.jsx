@@ -5,7 +5,7 @@ import Navbar from './Navbarsignup.jsx';
 import StudentSignup from './StudentSignup.jsx';
 import MessSignup from './MessSignup.jsx';
 import RoomSignup from './RoomSignup.jsx';
-import Footer from '../landing page/footer.jsx';
+import Footer from '../landing page/Footer.jsx';
 import './signup.css';
 
 const Signup = () => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './forgotPassword.css';
+import './ForgotPassword.css';
 import Navbar from '../signup page/Navbarsignup.jsx';
-import Footer from '../landing page/footer.jsx';
+import Footer from '../landing page/Footer.jsx';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const ForgotPassword = () => {

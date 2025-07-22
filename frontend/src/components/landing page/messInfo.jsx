@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
-import './MessInfo.css';
+import './messInfo.css';
 import messImg from '../../assets/img3.png';
 
 const MessInfo = () => {
@@ -14,10 +14,10 @@ const MessInfo = () => {
   return (
     <div className="mess-info-container">
       {/* Left Image */}
-      <div class="mess-info-image">
+      <div className="mess-info-image">
         
         <img src={messImg} alt="Mess Illustration" />
-        <div class="image-info-popup">
+        <div className="image-info-popup">
           Our AI suggests mess plans based on your diet, taste & budget.
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import for internal links
-import "./Footer.css";
+import "./footer.css";
 import logo from "../../assets/CampusConnect logo.png";
 import {
   FaFacebookF,

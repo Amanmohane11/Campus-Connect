@@ -1,6 +1,6 @@
 import React from "react";
 import { loadFull } from "tsparticles";
-import Particles from "react-tsparticles";
+import Particles from "@tsparticles/react";
 import { useCallback } from "react";
 
 function Particle() {
