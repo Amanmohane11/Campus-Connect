@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:5000/api/student";
+
+const API_URL = import.meta.env.VITE_API_URL;
+const BASE_URL =`${API_URL}/student`;
 
 // -------------------- AUTH -------------------- //
 
@@ -61,14 +63,14 @@ export const fetchStudentProfile = async (token) => {
 
 
 export const fetchSuggestions = async (token) => {
-  const res = await fetch("http://localhost:5000/api/student/suggestions", {
+  const res = await fetch(`${API_URL}/student/suggestions`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   return res.json();
 };
 
 export const addStudentSuggestion = async (token, type, providerId) => {
-  const res = await fetch("http://localhost:5000/api/student/suggestions", {
+  const res = await fetch(`${API_URL}/student/suggestions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +82,7 @@ export const addStudentSuggestion = async (token, type, providerId) => {
 };
 
 export const sendStudentMessage = async (token, fullName, email, message) => {
-  const res = await fetch("http://localhost:5000/api/student/contact", {
+  const res = await fetch(`${API_URL}/student/contact`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -94,7 +96,7 @@ export const sendStudentMessage = async (token, fullName, email, message) => {
 };
 
 export const rateSelectedMess = async (token, rating) => {
-  const res = await fetch("http://localhost:5000/api/student/rate-mess", {
+  const res = await fetch(`${API_URL}/student/rate-mess`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -108,7 +110,7 @@ export const rateSelectedMess = async (token, rating) => {
 };
 
 export const rateSelectedRoom = async (token, rating) => {
-  const res = await fetch("http://localhost:5000/api/student/rate-room", {
+  const res = await fetch(`${API_URL}/student/rate-room`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -123,7 +125,7 @@ export const rateSelectedRoom = async (token, rating) => {
 
 
 // Add this line near the top of your file
-const BASE_URL_MESS = "http://localhost:5000/api/mess";
+const BASE_URL_MESS = `${API_URL}/mess`;
 
 // -------------------- MESS PROVIDER PROFILE -------------------- //
 
@@ -141,7 +143,7 @@ export const fetchMessProfile = async (token) => {
 
 //  -------------------- ROOM PROVIDER PROFILE -------------------- //
 
-const BASE_URL_ROOM = "http://localhost:5000/api/room";
+const BASE_URL_ROOM = `${API_URL}/room`;
 
 export const fetchRoomProfile = async (token) => {
   const res = await fetch(`${BASE_URL_ROOM}/room-profilepage`, {
@@ -155,7 +157,7 @@ export const fetchRoomProfile = async (token) => {
 };
 
 export const sendMessMessage = async (token, message) => {
-  const res = await fetch("http://localhost:5000/api/student/send-mess-message", {
+  const res = await fetch(`${API_URL}/student/send-mess-message`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -173,7 +175,7 @@ export const sendMessMessage = async (token, message) => {
 };
 
 export const sendRoomMessage = async (token, message) => {
-  const res = await fetch("http://localhost:5000/api/student/send-room-message", {
+  const res = await fetch(`${API_URL}/student/send-room-message`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -186,7 +188,7 @@ export const sendRoomMessage = async (token, message) => {
   return res.json();
 };
 export const fetchMessRequests = async (token) => {
-  const res = await fetch("http://localhost:5000/api/mess/requests", {
+  const res = await fetch(`${API_URL}/mess/requests`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -198,7 +200,7 @@ export const fetchMessRequests = async (token) => {
 };
 
 export const acceptMessRequest = async (token, studentId) => {
-  const res = await fetch("http://localhost:5000/api/mess/accept-request", {
+  const res = await fetch(`${API_URL}/mess/accept-request`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -213,7 +215,7 @@ export const acceptMessRequest = async (token, studentId) => {
 
 
 export const fetchConnectedStudents = async (token) => {
-  const res = await fetch("http://localhost:5000/api/mess/connected", {
+  const res = await fetch(`${API_URL}/mess/connected`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   return res.json();
@@ -221,7 +223,7 @@ export const fetchConnectedStudents = async (token) => {
 
 
 export const fetchRoomRequests = async (token) => {
-  const res = await fetch("http://localhost:5000/api/room/requests", {
+  const res = await fetch(`${API_URL}/room/requests`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -232,7 +234,7 @@ export const fetchRoomRequests = async (token) => {
 };
 
 export const acceptRoomRequest = async (token, studentId) => {
-  const res = await fetch("http://localhost:5000/api/room/accept-request", {
+  const res = await fetch(`${API_URL}/room/accept-request`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -246,7 +248,7 @@ export const acceptRoomRequest = async (token, studentId) => {
 };
 
 export const fetchConnectedMessStudents = async (token) => {
-  const res = await fetch("http://localhost:5000/api/mess/connected-students", {
+  const res = await fetch(`${API_URL}/mess/connected-students`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -257,7 +259,7 @@ export const fetchConnectedMessStudents = async (token) => {
   return res.json();
 };
 export const fetchConnectedRoomStudents = async (token) => {
-  const res = await fetch("http://localhost:5000/api/room/connected-room-students", {
+  const res = await fetch(`${API_URL}/room/connected-room-students`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`

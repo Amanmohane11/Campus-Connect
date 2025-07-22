@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import RoomNavbar from './RoomNavbar';
-import RoomSidebar from './RoomSidebar';
-import RoomDashboard from './RoomDashboard';
-import Roomcontactus from './Roomcontactus';
-import RoomUpdates from './RoomUpdates';
-import RoomRequest from './RoomRequest';
-import RoomConnectedPeople from './ConnectedRoomPeople';
-import RoomUpdateDetails from './RoomUpdateDetails';
+import RoomNavbar from './RoomNavbar.jsx';
+import RoomSidebar from './RoomSidebar.jsx';
+import RoomDashboard from './RoomDashboard.jsx';
+import Roomcontactus from './Roomcontactus.jsx';
+import RoomUpdates from './RoomUpdates.jsx';
+import RoomRequest from './RoomRequest.jsx';
+import RoomConnectedPeople from './ConnectedRoomPeople.jsx';
+import RoomUpdateDetails from './RoomUpdateDetails.jsx';
 
 import './RoomProfilePage.css'
 

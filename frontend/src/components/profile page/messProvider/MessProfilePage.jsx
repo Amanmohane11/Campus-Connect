@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MessNavbar from './MessNavbar';
-import MessSidebar from './MessSidebar';
-import MessDashboard from './MessDashboard';
-import Messcontactus from './Messcontactus';
-import MessUpdates from './MessUpdates';
-import MessRequest from './MessRequest';
-import ConnectedPeople from './ConnectedPeople';
-import MessUpdateDetails from './MessUpdateDetails';
+import MessNavbar from './MessNavbar.jsx';
+import MessSidebar from './MessSidebar.jsx';
+import MessDashboard from './MessDashboard.jsx';
+import Messcontactus from './Messcontactus.jsx';
+import MessUpdates from './MessUpdates.jsx';
+import MessRequest from './MessRequest.jsx';
+import ConnectedPeople from './ConnectedPeople.jsx';
+import MessUpdateDetails from './MessUpdateDetails.jsx';
 
 import './MessProfilePage.css'
 

@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Typewriter from "typewriter-effect";
-import Particle from "../particle";
-import Header from "./header";
-import Footer from "./footer";
-import ServicedBy from './ServicedBy';
-import StudentInfo from "./studentInfo";
-import MessInfo from "./messInfo";
-import ContactUs from "./contactUs";
-import RoomInfo from "./roomInfo";
+import Particle from "../particle.jsx";
+import Header from "./header.jsx";
+import Footer from "./footer.jsx";
+import ServicedBy from './ServicedBy.jsx';
+import StudentInfo from "./studentInfo.jsx";
+import MessInfo from "./messInfo.jsx";
+import ContactUs from "./contactUs.jsx";
+import RoomInfo from "./roomInfo.jsx";
 import img1 from '../../assets/img1.png';
 import bgImage from '../../assets/home-bg.jpg'; // ✅ imported background image
 

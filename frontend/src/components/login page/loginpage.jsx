@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import LoginNavbar from './LoginNavbar';
-import StudentLoginForm from './studentLoginform';
-import MessLoginForm from './messLoginform';
-import RoomLoginForm from './roomLoginform';
-import Footer from '../landing page/footer';
+import LoginNavbar from './LoginNavbar.jsx';
+import StudentLoginForm from './studentLoginform.jsx';
+import MessLoginForm from './messLoginform.jsx';
+import RoomLoginForm from './roomLoginform.jsx';
+import Footer from '../landing page/footer.jsx';
 import './loginpage.css'; // You can reuse signup.css if layout is similar
 
 const LoginPage = () => {

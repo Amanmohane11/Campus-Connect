@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Dashboard from './Dashboard';
-import RoomServices from './roomServices';
-import MessServices from './messServices';
-import Suggestions from './suggestions';
-import StdContactus from './Stdcontactus';
-import StdUpdateDetails from './StdUpdateDetails';
+import Navbar from './Navbar.jsx';
+import Sidebar from './Sidebar.jsx';
+import Dashboard from './Dashboard.jsx';
+import RoomServices from './roomServices.jsx';
+import MessServices from './messServices.jsx';
+import Suggestions from './suggestions.jsx';
+import StdContactus from './Stdcontactus.jsx';
+import StdUpdateDetails from './StdUpdateDetails.jsx';
 
 import './profilepage.css'
 

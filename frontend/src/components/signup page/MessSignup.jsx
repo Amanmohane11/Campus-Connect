@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './MessSignup.css';
 
 const MessSignup = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [formData, setFormData] = useState({
     fullName: '',
     companyName: '',
@@ -100,7 +101,7 @@ const MessSignup = () => {
 
     try {
       setLoadingOtp(true);
-      const res = await fetch('http://localhost:5000/api/mess/generate-otp', {
+      const res = await fetch(`${API_URL}/mess/generate-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -141,7 +142,7 @@ const MessSignup = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/mess/signup', {
+      const res = await fetch(`${API_URL}/mess/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, otp: fullOtp })

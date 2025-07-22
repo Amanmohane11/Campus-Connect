@@ -27,9 +27,9 @@ const RoomLoginForm = () => {
       alert('❌ Password must be at least 6 characters long.');
       return;
     }
-
+    const API_URL = import.meta.env.VITE_API_URL;
     try {
-      const res = await axios.post('http://localhost:5000/api/room/login', {
+      const res = await axios.post(`${API_URL}/room/login`, {
         email,
         password
       });

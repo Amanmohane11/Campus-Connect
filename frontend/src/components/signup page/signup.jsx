@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Navbar from './Navbarsignup';
-import StudentSignup from './StudentSignup';
-import MessSignup from './MessSignup';
-import RoomSignup from './RoomSignup';
-import Footer from '../landing page/footer';
+import Navbar from './Navbarsignup.jsx';
+import StudentSignup from './StudentSignup.jsx';
+import MessSignup from './MessSignup.jsx';
+import RoomSignup from './RoomSignup.jsx';
+import Footer from '../landing page/footer.jsx';
 import './signup.css';
 
 const Signup = () => {

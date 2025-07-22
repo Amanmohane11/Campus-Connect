@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './forgotPassword.css';
-import Navbar from '../signup page/Navbarsignup';
-import Footer from '../landing page/footer';
+import Navbar from '../signup page/Navbarsignup.jsx';
+import Footer from '../landing page/footer.jsx';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const MessForgotPassword = () => {
   const navigate = useNavigate();
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const [email, setEmail] = useState('');
   const [otpSent, setOtpSent] = useState(false);
   const [sendingOtp, setSendingOtp] = useState(false);
@@ -33,7 +33,7 @@ const MessForgotPassword = () => {
 
     try {
       setSendingOtp(true);
-      const response = await fetch('http://localhost:5000/api/mess/forgot-password/send-otp', {
+      const response = await fetch(`${API_URL}/mess/forgot-password/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -96,7 +96,7 @@ const MessForgotPassword = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/mess/forgot-password/reset', {
+      const response = await fetch(`${API_URL}/mess/forgot-password/reset`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp: otpValue, newPassword })

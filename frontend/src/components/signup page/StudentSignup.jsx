@@ -20,6 +20,8 @@ const StudentSignup = () => {
     pinCode: ''
   });
 
+const API_URL = import.meta.env.VITE_API_URL;
+
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
@@ -107,7 +109,7 @@ const StudentSignup = () => {
 
     try {
       setLoadingOtp(true);
-      const res = await fetch('http://localhost:5000/api/student/generate-otp', {
+      const res = await fetch(`${API_URL}/student/generate-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim() })
@@ -144,7 +146,7 @@ const StudentSignup = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/student/signup', {
+      const res = await fetch(`${API_URL}/student/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, email: formData.email.trim(), otp: finalOtp })

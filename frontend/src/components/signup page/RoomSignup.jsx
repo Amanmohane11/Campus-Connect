@@ -4,6 +4,8 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './RoomSignup.css';
 
 const RoomSignup = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -40,12 +42,13 @@ const RoomSignup = () => {
   };
 
   const validatePassword = (password) => ({
-    length: password.length >= 8,
-    lowercase: /[a-z]/.test(password),
-    uppercase: /[A-Z]/.test(password),
-    number: /\d/.test(password),
-    specialChar: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+    length: password.length >= 8,                // ✅ at least 8 characters
+    lowercase: /[a-z]/.test(password),           // ✅ contains at least one lowercase letter
+    uppercase: /[A-Z]/.test(password),           // ✅ contains at least one uppercase letter
+    number: /\d/.test(password),                 // ✅ contains at least one digit (0-9)
+    specialChar: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password) // ✅ contains at least one special character
   });
+  
 
   const passwordChecks = validatePassword(formData.password);
 
@@ -88,7 +91,7 @@ const RoomSignup = () => {
 
     try {
       setLoadingOtp(true);
-      const res = await fetch('http://localhost:5000/api/room/generate-otp', {
+      const res = await fetch(`${API_URL}/room/generate-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email.trim() })
@@ -118,7 +121,7 @@ const RoomSignup = () => {
     if (otp.some(val => val === '')) return alert('Please enter the complete 4-digit OTP');
 
     try {
-      const res = await fetch('http://localhost:5000/api/room/signup', {
+      const res = await fetch(`${API_URL}/room/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, email: formData.email.trim(), otp: fullOtp })
