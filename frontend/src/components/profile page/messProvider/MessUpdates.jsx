@@ -4,12 +4,13 @@ import './MessUpdates.css';
 const MessUpdates = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:5000/api/mess/messages", {
+        const res = await fetch(`${API_URL}/mess/messages`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
